@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خراسان شمالی</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0; /* حذف فاصله‌ها */
+            background-color: #f4f4f4;
+            padding-top: 30px;
+        }
+
+        .province-details {
+            background-color: #fff;
+            width: 60%;
+            padding: 20px;
+            /* margin-top: 20px; */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .province-details h2 {
+            color: #1E88E5;
+        }
+        .province-details img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .symbols {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .symbol {
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+        .symbol img {
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 40px;
+            background-color: #1E88E5; /* رنگ آبی اصلی */
+            color: white; /* متن سفید */
+            border: none; /* بدون حاشیه */
+            padding: 12px 20px; /* فاصله داخلی از بالا/پایین و چپ/راست */
+            font-size: 16px; /* اندازه فونت */
+            border-radius: 5px; /* گوشه‌های گرد */
+            cursor: pointer; /* نمایش اشاره‌گر دست */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* افکت‌های انتقال */
+        }
+
+        button:hover {
+            background-color: #1565C0; /* رنگ تیره‌تر آبی هنگام هاور */
+            transform: scale(1.05); /* بزرگ‌تر شدن دکمه هنگام هاور */
+        }
+
+        button:active {
+            background-color: #0D47A1; /* رنگ حتی تیره‌تر هنگام کلیک */
+            transform: scale(1); /* بازگشت به اندازه اصلی هنگام کلیک */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="province-details">
+        <h2>خراسان شمالی</h2>
+        <p>استان خراسان شمالی با طبیعت بکر و کوهستانی خود، مرز مشترک با ترکمنستان دارد. بجنورد مرکز این استان است.</p>
+        <div class="symbols">
+            <div class="symbol">
+                <h3>نماد گیاهی</h3>
+                <p>اُرس‌</p>
+                <img src="../Images/درخت ارس.jpg" alt="درخت ارس" />
+            </div>
+            <div class="symbol">
+                <h3>نماد جانوری</h3>
+                <p>قوچ اوریال</p>
+                <img src="../Images/قوچ اوریال.jpg" alt="قوچ اوریال" />
+            </div>
+        </div>
+        <a href="../index.html"><button>بازگشت</button></a>
+    </div>
+</body>
+</html>
