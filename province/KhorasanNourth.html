@@ -5,71 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>خراسان شمالی</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Vazirmatn', sans-serif;
             direction: rtl;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0; /* حذف فاصله‌ها */
-            background-color: #f4f4f4;
-            padding-top: 30px;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            padding: 20px;
         }
 
         .province-details {
-            background-color: #fff;
+            background-color: #ffffff;
             width: 60%;
-            padding: 20px;
-            /* margin-top: 20px; */
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out;
         }
+
+        .province-details:hover {
+            transform: translateY(-5px);
+        }
+
         .province-details h2 {
             color: #1E88E5;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
-        .province-details img {
-            max-width: 100%;
-            border-radius: 10px;
+
+        .province-details p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            font-weight: 400;
         }
+
         .symbols {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 20px;
         }
+
         .symbol {
             text-align: center;
             flex: 1;
             margin: 0 10px;
+            padding: 15px;
+            background: #f7f7f7;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
+
+        .symbol:hover {
+            transform: scale(1.05);
+        }
+
+        .symbol h3 {
+            font-size: 20px;
+            color: #1E88E5;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .symbol p {
+            font-size: 16px;
+            color: #444;
+            font-weight: 300;
+        }
+
         .symbol img {
             width: 200px;
             height: 200px;
             margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
+
+        .symbol img:hover {
+            transform: scale(1.08);
+        }
+
         button {
-            margin-top: 40px;
-            background-color: #1E88E5; /* رنگ آبی اصلی */
-            color: white; /* متن سفید */
-            border: none; /* بدون حاشیه */
-            padding: 12px 20px; /* فاصله داخلی از بالا/پایین و چپ/راست */
-            font-size: 16px; /* اندازه فونت */
-            border-radius: 5px; /* گوشه‌های گرد */
-            cursor: pointer; /* نمایش اشاره‌گر دست */
-            transition: background-color 0.3s ease, transform 0.2s ease; /* افکت‌های انتقال */
+            margin-top: 30px;
+            background: #1E88E5;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            font-weight: 700;
         }
 
         button:hover {
-            background-color: #1565C0; /* رنگ تیره‌تر آبی هنگام هاور */
-            transform: scale(1.05); /* بزرگ‌تر شدن دکمه هنگام هاور */
+            background: #1565C0;
+            transform: scale(1.08);
         }
 
-        button:active {
-            background-color: #0D47A1; /* رنگ حتی تیره‌تر هنگام کلیک */
-            transform: scale(1); /* بازگشت به اندازه اصلی هنگام کلیک */
-        }
+        @media (max-width: 768px) {
+            .province-details {
+                width: 90%;
+                padding: 20px;
+            }
 
+            .symbols {
+                flex-direction: column;
+            }
+
+            .symbol {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -79,7 +138,7 @@
         <div class="symbols">
             <div class="symbol">
                 <h3>نماد گیاهی</h3>
-                <p>اُرس‌</p>
+                <p>اُرس</p>
                 <img src="../Images/درخت ارس.jpg" alt="درخت ارس" />
             </div>
             <div class="symbol">
